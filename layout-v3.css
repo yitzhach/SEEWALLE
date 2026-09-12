@@ -1,0 +1,64 @@
+/* Version 3: a full coastal panorama, then a separate materials row. */
+.hero-intro{min-height:230px;gap:3rem;padding-block:2rem}
+.hero h1{font-size:clamp(4rem,7vw,6.5rem);line-height:.87}
+.hero-image{height:auto;min-height:0;overflow:hidden;background:#9ab0b5}
+.hero-image>img{width:100%;height:auto;object-fit:contain;object-position:center}
+.hero-image:after{display:none}
+.hero-image figcaption{display:none}
+.reclaimed-row{padding-block:1.5rem 1.8rem;border-bottom:1px solid var(--line)}
+.row-heading{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;margin-bottom:1rem}
+.row-heading h2{font:400 1.65rem/1.1 var(--serif);margin:0;letter-spacing:-.03em}
+.row-heading p{margin:0;font-size:.875rem;color:var(--muted)}
+.reclaimed-track{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.2rem}
+.reclaimed-track>a{display:block;text-decoration:none;min-width:0}
+.reclaimed-track img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.reclaimed-track span{display:flex;justify-content:space-between;align-items:center;gap:.5rem;margin-top:.6rem;font:400 1.2rem/1.25 var(--serif)}
+.reclaimed-track b{font:400 1rem var(--sans);color:var(--accent)}
+.reclaimed-track a:hover span{color:var(--accent)}
+.reclaimed-track a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.jump-grid{padding-block:1rem 1.5rem}
+.jump-card{padding-block:.6rem}
+.new-seawall-statement{background:var(--sea);color:var(--white);padding-block:5rem;border-bottom:1px solid rgba(255,255,255,.16)}
+.new-seawall-statement p{margin:0 0 1.3rem;color:#aec4c7;font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase}
+.new-seawall-statement h2{max-width:1050px;margin:0;font:400 clamp(3.4rem,7vw,7.5rem)/.9 var(--serif);letter-spacing:-.055em}
+/* Avoid repeating the same material cards farther down the page. */
+.materials-section .material-grid{display:none}
+.materials-section{padding-block:5rem}
+.materials-section .section-title-row{margin-bottom:0}
+.compact-details{display:block;padding-block:3rem 5rem}
+.compact-details article{display:grid;grid-template-columns:1.05fr 1fr;align-items:center;gap:4rem;padding-block:3rem}
+.compact-details article>img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
+.compact-details h2{font-size:clamp(2.3rem,3.5vw,3.7rem);line-height:1}
+.compact-details article>div>p:not(.eyebrow){color:var(--muted)}
+.locations strong{display:block;line-height:1.5;overflow-wrap:break-word}
+@media(max-width:1100px){.hero-side{display:block}.hero-side p{margin-top:0}.hero-side .button{margin-top:.5rem}.hero-intro{min-height:210px}.compact-details article{gap:2rem}}
+@media(max-width:860px){
+ .hero-intro{grid-template-columns:1fr 1fr;gap:1.5rem;min-height:0;padding-block:1.5rem}
+ .hero h1{font-size:clamp(3rem,8vw,5rem)}
+ .hero-side{border:0;padding:0}
+ .hero-side p{font-size:1.15rem}
+ .hero-image{height:auto;min-height:0}
+ .hero-image>img{height:auto;object-fit:contain;object-position:center}
+ .reclaimed-track{display:flex;overflow-x:auto;gap:1rem;scroll-snap-type:x mandatory;padding:.25rem 0 .75rem;scrollbar-width:thin;scrollbar-color:var(--accent) var(--line)}
+ .reclaimed-track>a{flex:0 0 42%;scroll-snap-align:start}
+ .jump-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+ .jump-card{border:0;margin:0;padding:.75rem 0}
+ .jump-card h2{font-size:1.65rem}
+ .jump-card p{font-size:.875rem}
+ .compact-details article{grid-template-columns:1fr;gap:1.5rem}
+}
+@media(max-width:520px){
+ .hero-intro{grid-template-columns:1fr;gap:1rem;padding-block:1.2rem}
+ .hero h1{font-size:3.7rem}
+ .hero-side{display:flex;align-items:center;justify-content:space-between;gap:.75rem}
+ .hero-side p{font-size:1.1rem;margin:0}
+ .hero-side .button{width:auto;margin:0;padding:.8rem;gap:.6rem;font-size:.75rem}
+ .hero-image{height:auto;min-height:0}
+ .hero-image>img{height:auto;object-fit:contain;object-position:center}
+ .row-heading{display:block}.row-heading p{margin-top:.3rem}
+ .reclaimed-track>a{flex-basis:67%}
+ .reclaimed-track span{font-size:1.2rem}
+ .jump-grid{gap:.7rem}.jump-card h2{font-size:1.4rem}
+ .new-seawall-statement{padding-block:4rem}.new-seawall-statement h2{font-size:3.25rem}
+ .compact-details article{padding-block:2rem}
+}
